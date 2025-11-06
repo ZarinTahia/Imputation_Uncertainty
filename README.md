@@ -14,34 +14,27 @@ It implements and compares different imputation algorithms — from optimization
 
 ## Project Structure
 
-IMPUTATION_UNCERTAINTY/
-│
-├── Data/ # Datasets used for experiments
-├── Notebook/ # Jupyter notebooks (one per dataset)
-│ ├── BCancer.ipynb # Breast Cancer dataset
-│ ├── Biodegradation.ipynb # Biodegradation dataset
-│ ├── CaliforniaHousing.ipynb# California Housing dataset
-│ ├── Disease.ipynb # Diabetes dataset
-│ ├── Energy.ipynb # Energy Efficiency dataset
-│ ├── GasSensor.ipynb # Gas Sensor Array Drift dataset
-│ ├── HIGGS.ipynb # HIGGS dataset
-│ ├── wine.ipynb # Wine Quality dataset
-│ ├── experiment.ipynb # Main experiment pipeline
-│ └── ex.ipynb, ch.ipynb... # Miscellaneous exploratory notebooks
-│
-├── Output/ # Saved results, metrics, and plots
-│
-├── Inject_Missing_Values.py # Generates MCAR, MAR, MNAR missingness
-├── imputers_updated.py # Unified wrapper for all imputers
-├── MIWAE.py # MIWAE and MIWAE-U (uncertainty-aware variant)
-├── Gain.py # GAIN and GAIN-U implementations
-├── SoftImpute.py # SoftImpute (matrix factorization) baseline
-├── TabCSDI.py # TabCSDI diffusion-based imputer
-├── Utils.py # Metrics, evaluation, and visualization utilities
-├── OTImpute.py (if applicable) # Optimal Transport-based imputer
-│
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+IMPUTATION_UNCERTAINTY
+
+Notebook/ # Jupyter notebooks (one per dataset)
+  BCancer.ipynb # Breast Cancer dataset
+  Biodegradation.ipynb # Biodegradation dataset
+  CaliforniaHousing.ipynb# California Housing dataset
+  Energy.ipynb # Energy Efficiency dataset
+  wine.ipynb # Wine Quality dataset
+
+Output/ # Saved results, metrics, and plots
+Inject_Missing_Values.py # Generates MCAR, MAR, MNAR missingness
+imputers_updated.py # Unified wrapper for all imputers
+MIWAE.py # MIWAE and MIWAE-U (uncertainty-aware variant)
+Gain.py # GAIN and GAIN-U implementations
+SoftImpute.py # SoftImpute (matrix factorization) baseline
+TabCSDI.py # TabCSDI diffusion-based imputer
+Utils.py # Metrics, evaluation, and visualization utilities
+OTImpute.py (if applicable) # Optimal Transport-based imputer
+
+requirements.txt # Python dependencies
+README.md # Project documentation
 
 
 ---
@@ -77,24 +70,7 @@ Each dataset notebook in `/Notebook/` (e.g., `wine.ipynb`, `Energy.ipynb`) execu
 
 ---
 
-## ⚙️ Installation
 
-Clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/<your-username>/Imputation_Uncertainty.git
-cd Imputation_Uncertainty
-pip install -r requirements.txt
-
-
-Installation
-
-Clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/<your-username>/Imputation_Uncertainty.git
-cd Imputation_Uncertainty
-pip install -r requirements.txt
 
 @inproceedings{hossain2025imputation,
   title={Beyond Accuracy: An Empirical Study of Uncertainty Estimation in Imputation},
