@@ -24,11 +24,12 @@ We compare a diverse set of imputation methods and analyze how well their predic
 ## Project Structure
 
 Imputation_Uncertainty/
-│
 ├── Notebook/
 │   ├── wine.ipynb
 │   ├── BCancer.ipynb
-│   └── ...
+│   ├── Biodegradation.ipynb
+│   ├── CaliforniaHousing.ipynb
+│   └── Energy.ipynb
 │
 ├── Output/
 │   └── results & figures
@@ -44,6 +45,7 @@ Imputation_Uncertainty/
 │
 ├── requirements.txt
 └── README.md
+
 
 
 ## Implemented Methods
