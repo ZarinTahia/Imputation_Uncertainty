@@ -23,28 +23,31 @@ We compare a diverse set of imputation methods and analyze how well their predic
 ---
 ## Project Structure
 
-Imputation_Uncertainty/
-├── Notebook/
-│   ├── wine.ipynb
-│   ├── BCancer.ipynb
-│   ├── Biodegradation.ipynb
-│   ├── CaliforniaHousing.ipynb
-│   └── Energy.ipynb
-│
-├── Output/
-│   └── results & figures
-│
-├── Inject_Missing_Values.py
-├── imputers_updated.py
-├── MIWAE.py
-├── Gain.py
-├── SoftImpute.py
-├── TabCSDI.py
-├── OTImpute.py
-├── Utils.py
-│
-├── requirements.txt
-└── README.md
+### Notebook/
+- wine.ipynb – Wine Quality dataset
+- BCancer.ipynb – Breast Cancer dataset
+- Biodegradation.ipynb – Biodegradation dataset
+- CaliforniaHousing.ipynb – California Housing dataset
+- Energy.ipynb – Energy Efficiency dataset
+
+### Output/
+
+Saved results, metrics, and figures
+
+### Core Scripts
+
+- Inject_Missing_Values.py – MCAR, MAR, MNAR missingness injection
+- imputers_updated.py – Unified imputation interface
+- MIWAE.py – MIWAE and MIWAE-U implementations
+- Gain.py – GAIN and GAIN-U implementations
+- SoftImpute.py – Matrix factorization baseline
+- TabCSDI.py – Diffusion-based tabular imputer
+- OTImpute.py – Optimal Transport-based imputer
+- Utils.py – Evaluation metrics and visualization utilities
+
+### Other Files
+-requirements.txt – Python dependencies
+- README.md – Project documentation
 
 
 
