@@ -46,7 +46,7 @@ Saved results, metrics, and figures
 - Utils.py – Evaluation metrics and visualization utilities
 
 ### Other Files
--requirements.txt – Python dependencies
+- requirements.txt – Python dependencies
 - README.md – Project documentation
 
 
