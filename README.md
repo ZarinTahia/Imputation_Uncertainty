@@ -1,43 +1,52 @@
 # Imputation_Uncertainty
 
 This repository contains implementations and experiments for **missing data imputation with uncertainty estimation**.  
-It includes several classical and deep generative imputation models and evaluates their performance across multiple datasets and missingness mechanisms (MCAR, MAR, MNAR).
+It evaluates classical, optimization-based, generative, adversarial, and diffusion-based imputers under different missingness mechanisms.
 
 ---
 
 ## Overview
 
-The goal of this project is to explore the relationship between **accuracy** and **uncertainty calibration** in data imputation.  
-It implements and compares different imputation algorithms — from optimization-based to deep generative methods — and studies how well their predicted uncertainties align with true imputation errors.
+The goal of this project is to study the relationship between **imputation accuracy** and **uncertainty calibration**.  
+We compare a diverse set of imputation methods and analyze how well their predicted uncertainties reflect true imputation errors across multiple datasets and missingness settings.
+
+---
+
+## Key Features
+
+- Support for **MCAR, MAR, and MNAR** missingness  
+- Unified evaluation pipeline across methods  
+- Comparison of classical, generative, and diffusion-based imputers  
+- Explicit evaluation of **uncertainty calibration** using ECE  
+- Fully reproducible experiments via Jupyter notebooks  
 
 ---
 
 ## Project Structure
 
-IMPUTATION_UNCERTAINTY
+Imputation_Uncertainty/
+│
+├── Notebook/                     # Dataset-specific experiment notebooks
+│   ├── wine.ipynb
+│   ├── BCancer.ipynb
+│   ├── Biodegradation.ipynb
+│   ├── CaliforniaHousing.ipynb
+│   └── Energy.ipynb
+│
+├── Output/                       # Saved metrics, plots, and results
+│
+├── Inject_Missing_Values.py      # MCAR / MAR / MNAR injection
+├── imputers_updated.py           # Unified imputer interface
+├── MIWAE.py                      # MIWAE and MIWAE-U
+├── Gain.py                       # GAIN and GAIN-U
+├── SoftImpute.py                 # Matrix factorization baseline
+├── TabCSDI.py                    # Diffusion-based imputer
+├── OTImpute.py                   # Optimal Transport-based imputer
+├── Utils.py                      # Metrics, calibration, visualization
+│
+├── requirements.txt
+└── README.md
 
-Notebook/ # Jupyter notebooks (one per dataset)
-  BCancer.ipynb # Breast Cancer dataset
-  Biodegradation.ipynb # Biodegradation dataset
-  CaliforniaHousing.ipynb# California Housing dataset
-  Energy.ipynb # Energy Efficiency dataset
-  wine.ipynb # Wine Quality dataset
-
-Output/ # Saved results, metrics, and plots
-Inject_Missing_Values.py # Generates MCAR, MAR, MNAR missingness
-imputers_updated.py # Unified wrapper for all imputers
-MIWAE.py # MIWAE and MIWAE-U (uncertainty-aware variant)
-Gain.py # GAIN and GAIN-U implementations
-SoftImpute.py # SoftImpute (matrix factorization) baseline
-TabCSDI.py # TabCSDI diffusion-based imputer
-Utils.py # Metrics, evaluation, and visualization utilities
-OTImpute.py (if applicable) # Optimal Transport-based imputer
-
-requirements.txt # Python dependencies
-README.md # Project documentation
-
-
----
 
 ## Implemented Methods
 
