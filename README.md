@@ -21,31 +21,30 @@ We compare a diverse set of imputation methods and analyze how well their predic
 - Fully reproducible experiments via Jupyter notebooks  
 
 ---
-
 ## Project Structure
 
 Imputation_Uncertainty/
 │
 ├── Notebook/                     # Dataset-specific experiment notebooks
-│   ├── wine.ipynb
-│   ├── BCancer.ipynb
-│   ├── Biodegradation.ipynb
-│   ├── CaliforniaHousing.ipynb
-│   └── Energy.ipynb
+│   ├── wine.ipynb                # Wine Quality dataset
+│   ├── BCancer.ipynb             # Breast Cancer dataset
+│   ├── Biodegradation.ipynb      # Biodegradation dataset
+│   ├── CaliforniaHousing.ipynb   # California Housing dataset
+│   └── Energy.ipynb              # Energy Efficiency dataset
 │
-├── Output/                       # Saved metrics, plots, and results
+├── Output/                       # Saved results, metrics, and figures
 │
-├── Inject_Missing_Values.py      # MCAR / MAR / MNAR injection
-├── imputers_updated.py           # Unified imputer interface
-├── MIWAE.py                      # MIWAE and MIWAE-U
-├── Gain.py                       # GAIN and GAIN-U
-├── SoftImpute.py                 # Matrix factorization baseline
-├── TabCSDI.py                    # Diffusion-based imputer
+├── Inject_Missing_Values.py      # MCAR, MAR, MNAR missingness injection
+├── imputers_updated.py           # Unified wrapper for all imputation methods
+├── MIWAE.py                      # MIWAE and MIWAE-U implementations
+├── Gain.py                       # GAIN and GAIN-U implementations
+├── SoftImpute.py                 # SoftImpute baseline
+├── TabCSDI.py                    # Diffusion-based tabular imputer
 ├── OTImpute.py                   # Optimal Transport-based imputer
-├── Utils.py                      # Metrics, calibration, visualization
+├── Utils.py                      # Evaluation metrics and visualization utilities
 │
-├── requirements.txt
-└── README.md
+├── requirements.txt              # Python dependencies
+└── README.md                     # Project documentation
 
 
 ## Implemented Methods
