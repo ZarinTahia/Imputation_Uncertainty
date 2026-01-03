@@ -25,26 +25,25 @@ We compare a diverse set of imputation methods and analyze how well their predic
 
 Imputation_Uncertainty/
 │
-├── Notebook/                     # Dataset-specific experiment notebooks
-│   ├── wine.ipynb                # Wine Quality dataset
-│   ├── BCancer.ipynb             # Breast Cancer dataset
-│   ├── Biodegradation.ipynb      # Biodegradation dataset
-│   ├── CaliforniaHousing.ipynb   # California Housing dataset
-│   └── Energy.ipynb              # Energy Efficiency dataset
+├── Notebook/
+│   ├── wine.ipynb
+│   ├── BCancer.ipynb
+│   └── ...
 │
-├── Output/                       # Saved results, metrics, and figures
+├── Output/
+│   └── results & figures
 │
-├── Inject_Missing_Values.py      # MCAR, MAR, MNAR missingness injection
-├── imputers_updated.py           # Unified wrapper for all imputation methods
-├── MIWAE.py                      # MIWAE and MIWAE-U implementations
-├── Gain.py                       # GAIN and GAIN-U implementations
-├── SoftImpute.py                 # SoftImpute baseline
-├── TabCSDI.py                    # Diffusion-based tabular imputer
-├── OTImpute.py                   # Optimal Transport-based imputer
-├── Utils.py                      # Evaluation metrics and visualization utilities
+├── Inject_Missing_Values.py
+├── imputers_updated.py
+├── MIWAE.py
+├── Gain.py
+├── SoftImpute.py
+├── TabCSDI.py
+├── OTImpute.py
+├── Utils.py
 │
-├── requirements.txt              # Python dependencies
-└── README.md                     # Project documentation
+├── requirements.txt
+└── README.md
 
 
 ## Implemented Methods
